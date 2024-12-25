@@ -3,106 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Kartu Nama</title>
-</head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-04B1SG08NS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-04B1SG08NS');
-</script>
-<head>
+    <title>Marsya adinda</title>
     <style>
-        body {
+       body {
+            margin: 0;
             font-family: Arial, sans-serif;
+            background-color: #f5c6cb;
+            background-image: url('bg1.jpg'); /* Ganti dengan URL gambar Anda */
+            background-repeat: repeat;
+            background-size: 150px;
+            color: #f28482;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #f4f4f9;
+            height: 100vh;
+            text-align: center;
         }
+
         .card {
-            background-color: #ffffff;
-            border: 1px solid #dddddd;
-            border-radius: 10px;
+            background: #fff;
+            border-radius: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
             text-align: center;
             padding: 20px;
+            width: 320px;
+            border: 5px solid #fcc9cf;
         }
-        .card img {
-            border-radius: 50%;
+        .profile-pic {
             width: 100px;
             height: 100px;
-            margin-bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid #f9bec7;
+            margin: 0 auto;
         }
-        .card h1 {
-            font-size: 1.5em;
-            margin: 0;
-            color: #333333;
+        .name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #f28482;
+            margin-top: 10px;
         }
-        .card p {
-            color: #666666;
-            font-size: 0.9em;
-            margin: 5px 0 15px;
+        .subtitle {
+            font-size: 14px;
+            color: #9e7188;
         }
         .skills {
-            margin: 10px 0;
-            list-style: none;
-            padding: 0;
+            margin: 20px 0;
+            text-align: left;
         }
-        .skills li {
-            background-color: #e3f2fd;
-            color: #007bb5;
-            border-radius: 5px;
-            padding: 5px 10px;
-            margin: 5px;
+        .skills h3 {
+            color: #f4978e;
+            margin-bottom: 10px;
+        }
+        .skill-item {
+            background-color: #ffe5ec;
+            padding: 8px;
+            border-radius: 15px;
             display: inline-block;
-            font-size: 0.8em;
+            margin: 5px;
+            font-size: 12px;
         }
-        .contact {
-            margin-top: 15px;
+        .pricing {
+            margin: 20px 0;
         }
-        .contact a {
+        .pricing h3 {
+            color: #f4978e;
+        }
+        .pricing p {
+            font-size: 14px;
+            color: #9e7188;
+        }
+        .contact-icons {
+            margin-top: 20px;
+        }
+        .contact-icons a {
             text-decoration: none;
-            color: #007bb5;
-            font-size: 1.2em;
+            color: #f28482;
             margin: 0 10px;
+            font-size: 20px;
         }
-        .contact a:hover {
-            color: #005f8b;
+        .footer-text {
+            font-size: 12px;
+            margin-top: 10px;
+            color: #9e7188;
         }
     </style>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-04B1SG08NS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-04B1SG08NS');
-</script>
 <body>
     <div class="card">
-        <img src="https://via.placeholder.com/100" alt="Profile Picture">
-        <h1>Nama Anda</h1>
-        <p>Web Developer | Designer | Programmer</p>
-        <ul class="skills">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-        </ul>
-        <div class="contact">
-            <a href="mailto:email@anda.com">✉</a>
-            <a href="https://github.com/username" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+        <img src="ppweb.jpg" alt="Profile Picture" class="profile-pic">
+        <h1 class="name">Marsya Adinda</h1>
+        <p class="subtitle">Mahasiswa Universitas Logistik dan Bisnis Internasional</p>
+         <p class="subtitle">Jurusan D4 Teknik Informatika</p>
+        
+        <div class="skills">
+            <h3>Keahlian:</h3>
+            <span class="skill-item">Mengajar Ngaji</span>
+            <span class="skill-item">Canva</span>
+            <span class="skill-item">HTML</span>
+            <span class="skill-item">CSS</span>
+            <span class="skill-item">JavaScript</span>
         </div>
+        
+        <div class="pricing">
+            <h3>Tarif Jasa:</h3>
+            <p>20K-50K/Jam</p>
+        </div>
+        
+        <div class="contact-icons">
+            <a href="https://instagram.com/marsyadindaaa_"title="Instagram">📷</a>
+            <a href="https://wa.me/6282191365504" title="WhatsApp">📞</a>
+            <a href="https://waffletoping.id.biz.id/" title="Website">🌐</a>
+            <a href="https://github.com/marsyadindaaa" title="Github">🤖</a>
+            <a href="mailto:adindamarsya33@gmail.com" title="Email">📧</a>
+        </div>
+        
+        <p class="footer-text"> "Tidak ada yang sempurna dimuka bumi ini, karna yang sempurna hanya milik Allah SWT"</p>
     </div>
 </body>
 </html>

@@ -1,0 +1,16 @@
+{
+    "name": "Marsya Adinda",
+    "profilePic": "ppweb.jpg",
+    "university": "Mahasiswa Universitas Logistik dan Bisnis Internasional",
+    "major": "Jurusan D4 Teknik Informatika",
+    "skills": ["Mengajar Ngaji", "Canva", "HTML", "CSS", "JavaScript"],
+    "pricing": "20K-50K/Jam",
+    "contacts": [
+      { "icon": "📷", "link": "https://instagram.com/marsyadindaaa_", "title": "Instagram" },
+      { "icon": "📞", "link": "https://wa.me/6282191365504", "title": "WhatsApp" },
+      { "icon": "🌐", "link": "https://waffletoping.id.biz.id/", "title": "Website" },
+      { "icon": "🤖", "link": "https://github.com/marsyadindaaa", "title": "Github" },
+      { "icon": "📧", "link": "mailto:adindamarsya33@gmail.com", "title": "Email" }
+    ]
+  }
+  

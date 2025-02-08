@@ -1,122 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Marsya Adinda</title>
-    <style>
-       body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5c6cb;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .card {
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 320px;
-            border: 5px solid #fcc9cf;
-        }
-        .profile-pic {
-            width: 80px;
-            height: 100px;
-            border-radius: 10px;
-            border: 3px solid #f9bec7;
-        }
-        .name {
-            font-size: 22px;
-            font-weight: bold;
-            color: #f28482;
-        }
-        .subtitle, .pricing p {
-            font-size: 14px;
-            color: #9e7188;
-        }
-        .skills h3, .pricing h3 {
-            color: #f4978e;
-        }
-        .skill-item {
-            background-color: #ffe5ec;
-            padding: 8px;
-            border-radius: 15px;
-            display: inline-block;
-            margin: 5px;
-            font-size: 12px;
-        }
-        .contact-icons a {
-            text-decoration: none;
-            color: #f28482;
-            margin: 0 10px;
-            font-size: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="card" id="profile-card">
-        <img src="" alt="Profile Picture" class="profile-pic" id="profile-pic">
-        <h1 class="name" id="name"></h1>
-        <p class="subtitle" id="university"></p>
-        <p class="subtitle" id="major"></p>
-        
-        <div class="skills">
-            <h3>Keahlian:</h3>
-            <div id="skills-list"></div>
-        </div>
-        
-        <div class="pricing">
-            <h3>Tarif Jasa:</h3>
-            <p id="pricing"></p>
-        </div>
-        
-        <div class="contact-icons" id="contacts"></div>
-    </div>
+<script>
+    fetch('data.json')
+        .then(response => response.json())
+        .then(profileData => {
+            document.getElementById("profile-pic").src = profileData.profilePic;
+            document.getElementById("name").textContent = profileData.name;
+            document.getElementById("university").textContent = profileData.university;
+            document.getElementById("major").textContent = profileData.major;
+            document.getElementById("pricing").textContent = profileData.pricing;
 
-    <script>
-        const profileData = {
-            "name": "Marsya Adinda",
-            "profilePic": "ppweb.jpg",
-            "university": "Mahasiswa Universitas Logistik dan Bisnis Internasional",
-            "major": "Jurusan D4 Teknik Informatika",
-            "skills": ["Mengajar Ngaji", "Canva", "HTML", "CSS", "JavaScript"],
-            "pricing": "20K-50K/Jam",
-            "contacts": [
-                { "icon": "📷", "link": "https://instagram.com/marsyadindaaa_", "title": "Instagram" },
-                { "icon": "📞", "link": "https://wa.me/6282191365504", "title": "WhatsApp" },
-                { "icon": "🌐", "link": "https://waffletoping.id.biz.id/", "title": "Website" },
-                { "icon": "🤖", "link": "https://github.com/marsyadindaaa", "title": "Github" },
-                { "icon": "📧", "link": "mailto:adindamarsya33@gmail.com", "title": "Email" }
-            ]
-        };
+            const skillsContainer = document.getElementById("skills-list");
+            profileData.skills.forEach(skill => {
+                const skillElement = document.createElement("span");
+                skillElement.classList.add("skill-item");
+                skillElement.textContent = skill;
+                skillsContainer.appendChild(skillElement);
+            });
 
-        document.getElementById("profile-pic").src = profileData.profilePic;
-        document.getElementById("name").textContent = profileData.name;
-        document.getElementById("university").textContent = profileData.university;
-        document.getElementById("major").textContent = profileData.major;
-        document.getElementById("pricing").textContent = profileData.pricing;
-
-        const skillsContainer = document.getElementById("skills-list");
-        profileData.skills.forEach(skill => {
-            const skillElement = document.createElement("span");
-            skillElement.classList.add("skill-item");
-            skillElement.textContent = skill;
-            skillsContainer.appendChild(skillElement);
-        });
-
-        const contactsContainer = document.getElementById("contacts");
-        profileData.contacts.forEach(contact => {
-            const contactElement = document.createElement("a");
-            contactElement.href = contact.link;
-            contactElement.title = contact.title;
-            contactElement.innerHTML = contact.icon;
-            contactsContainer.appendChild(contactElement);
-        });
-    </script>
-</body>
-</html>
+            const contactsContainer = document.getElementById("contacts");
+            profileData.contacts.forEach(contact => {
+                const contactElement = document.createElement("a");
+                contactElement.href = contact.link;
+                contactElement.title = contact.title;
+                contactElement.innerHTML = contact.icon;
+                contactsContainer.appendChild(contactElement);
+            });
+        })
+        .catch(error => console.error('Error fetching profile data:', error));
+</script>

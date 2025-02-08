@@ -3,57 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marsya adinda</title>
+    <title>Profil Marsya Adinda</title>
     <style>
        body {
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #f5c6cb;
-            background-image: url('bg1.jpg'); /* Ganti dengan URL gambar Anda */
-            background-repeat: repeat;
-            background-size: 150px;
-            color: #f28482;
+            text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            text-align: center;
         }
-
         .card {
             background: #fff;
             border-radius: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
             padding: 20px;
             width: 320px;
             border: 5px solid #fcc9cf;
         }
-       .profile-pic {
-         width: 80px; /* Lebar gambar */
-         height: 100px; /* Tinggi gambar */
-         border-radius: 10px; /* Sudut membulat, bisa disesuaikan */
-         border: 3px solid #f9bec7; /* Border dengan ketebalan 3px dan warna tertentu */
-         margin: 0 auto; /* Mengatur margin agar gambar terpusat */
+        .profile-pic {
+            width: 80px;
+            height: 100px;
+            border-radius: 10px;
+            border: 3px solid #f9bec7;
         }
         .name {
             font-size: 22px;
             font-weight: bold;
             color: #f28482;
-            margin-top: 10px;
         }
-        .subtitle {
+        .subtitle, .pricing p {
             font-size: 14px;
             color: #9e7188;
         }
-        .skills {
-            margin: 20px 0;
-            text-align: middle;
-        }
-        .skills h3 {
+        .skills h3, .pricing h3 {
             color: #f4978e;
-            margin-bottom: 10px;
         }
         .skill-item {
             background-color: #ffe5ec;
@@ -63,62 +50,73 @@
             margin: 5px;
             font-size: 12px;
         }
-        .pricing {
-            margin: 20px 0;
-        }
-        .pricing h3 {
-            color: #f4978e;
-        }
-        .pricing p {
-            font-size: 14px;
-            color: #9e7188;
-        }
-        .contact-icons {
-            margin-top: 20px;
-        }
         .contact-icons a {
             text-decoration: none;
             color: #f28482;
             margin: 0 10px;
             font-size: 20px;
         }
-        .footer-text {
-            font-size: 12px;
-            margin-top: 10px;
-            color: #9e7188;
-        }
     </style>
 </head>
 <body>
-    <div class="card">
-        <img src="ppweb.jpg" alt="Profile Picture" class="profile-pic">
-        <h1 class="name">Marsya Adinda</h1>
-        <p class="subtitle">Mahasiswa Universitas Logistik dan Bisnis Internasional</p>
-         <p class="subtitle">Jurusan D4 Teknik Informatika</p>
+    <div class="card" id="profile-card">
+        <img src="" alt="Profile Picture" class="profile-pic" id="profile-pic">
+        <h1 class="name" id="name"></h1>
+        <p class="subtitle" id="university"></p>
+        <p class="subtitle" id="major"></p>
         
         <div class="skills">
             <h3>Keahlian:</h3>
-            <span class="skill-item">Mengajar Ngaji</span>
-            <span class="skill-item">Canva</span>
-            <span class="skill-item">HTML</span>
-            <span class="skill-item">CSS</span>
-            <span class="skill-item">JavaScript</span>
+            <div id="skills-list"></div>
         </div>
         
         <div class="pricing">
             <h3>Tarif Jasa:</h3>
-            <p>20K-50K/Jam</p>
+            <p id="pricing"></p>
         </div>
         
-        <div class="contact-icons">
-            <a href="https://instagram.com/marsyadindaaa_"title="Instagram">📷</a>
-            <a href="https://wa.me/6282191365504" title="WhatsApp">📞</a>
-            <a href="https://waffletoping.id.biz.id/" title="Website">🌐</a>
-            <a href="https://github.com/marsyadindaaa" title="Github">🤖</a>
-            <a href="mailto:adindamarsya33@gmail.com" title="Email">📧</a>
-        </div>
-        
-        <p class="footer-text"> "Tidak ada yang sempurna dimuka bumi ini, karna kesempurnaan hanya milik Allah SWT"</p>
+        <div class="contact-icons" id="contacts"></div>
     </div>
+
+    <script>
+        const profileData = {
+            "name": "Marsya Adinda",
+            "profilePic": "ppweb.jpg",
+            "university": "Mahasiswa Universitas Logistik dan Bisnis Internasional",
+            "major": "Jurusan D4 Teknik Informatika",
+            "skills": ["Mengajar Ngaji", "Canva", "HTML", "CSS", "JavaScript"],
+            "pricing": "20K-50K/Jam",
+            "contacts": [
+                { "icon": "📷", "link": "https://instagram.com/marsyadindaaa_", "title": "Instagram" },
+                { "icon": "📞", "link": "https://wa.me/6282191365504", "title": "WhatsApp" },
+                { "icon": "🌐", "link": "https://waffletoping.id.biz.id/", "title": "Website" },
+                { "icon": "🤖", "link": "https://github.com/marsyadindaaa", "title": "Github" },
+                { "icon": "📧", "link": "mailto:adindamarsya33@gmail.com", "title": "Email" }
+            ]
+        };
+
+        document.getElementById("profile-pic").src = profileData.profilePic;
+        document.getElementById("name").textContent = profileData.name;
+        document.getElementById("university").textContent = profileData.university;
+        document.getElementById("major").textContent = profileData.major;
+        document.getElementById("pricing").textContent = profileData.pricing;
+
+        const skillsContainer = document.getElementById("skills-list");
+        profileData.skills.forEach(skill => {
+            const skillElement = document.createElement("span");
+            skillElement.classList.add("skill-item");
+            skillElement.textContent = skill;
+            skillsContainer.appendChild(skillElement);
+        });
+
+        const contactsContainer = document.getElementById("contacts");
+        profileData.contacts.forEach(contact => {
+            const contactElement = document.createElement("a");
+            contactElement.href = contact.link;
+            contactElement.title = contact.title;
+            contactElement.innerHTML = contact.icon;
+            contactsContainer.appendChild(contactElement);
+        });
+    </script>
 </body>
 </html>

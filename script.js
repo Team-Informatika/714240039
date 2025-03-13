@@ -14,14 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
   let isDeleting = false;
 
   function typeText() {
-    const text = textList[textIndex]; // Ambil teks dari daftar
-    if (isDeleting) {
-      charIndex--;
-    } else {
-      charIndex++;
-    }
+    const text = textList[textIndex];
 
-    textElement.textContent = text.substring(0, charIndex); // Tampilkan teks dengan efek mengetik
+    // Mengatur proses mengetik dan menghapus karakter
+    textElement.textContent = text.substring(0, charIndex);
+    charIndex = isDeleting ? charIndex - 1 : charIndex + 1;
 
     // Atur kecepatan mengetik dan menghapus
     let typeSpeed = isDeleting ? 50 : 100;
@@ -51,29 +48,27 @@ document.addEventListener("DOMContentLoaded", () => {
       item.style.transform = "scale(1)";
     });
   });
-});
 
-// Fungsi untuk mengecek apakah elemen terlihat di viewport
-function isInViewport(element) {
+  // Fungsi untuk mengecek apakah elemen terlihat di viewport
+  function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return rect.top <= window.innerHeight - 100 && rect.bottom >= 100;
-}
+  }
 
-// Fungsi untuk menampilkan atau menyembunyikan kartu berdasarkan scroll
-function handleScroll() {
-    const timelineItems = document.querySelectorAll('.timeline-item');
-
-    timelineItems.forEach(item => {
-        if (isInViewport(item)) {
-            item.classList.add('show'); // Munculkan kartu
-        } else {
-            item.classList.remove('show'); // Sembunyikan kartu jika kembali ke atas
-        }
+  // Fungsi untuk menampilkan atau menyembunyikan kartu berdasarkan scroll
+  function handleScroll() {
+    document.querySelectorAll(".timeline-item").forEach((item) => {
+      if (isInViewport(item)) {
+        item.classList.add("show"); // Munculkan kartu
+      } else {
+        item.classList.remove("show"); // Sembunyikan kartu jika kembali ke atas
+      }
     });
-}
+  }
 
-// Event listener untuk scroll
-window.addEventListener('scroll', handleScroll);
+  // Event listener untuk scroll
+  window.addEventListener("scroll", handleScroll);
 
-// Jalankan sekali saat pertama kali halaman dimuat
-handleScroll();
+  // Jalankan sekali saat pertama kali halaman dimuat
+  handleScroll();
+});

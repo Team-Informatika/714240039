@@ -86,3 +86,50 @@ h2 {
     background-color: #ffb6c1; /* Pink pastel */
     transition: 0.3s;
 }
+
+.icon-container {
+    font-size: 1.5em;
+}
+
+/*kartu proyek*/
+/* Kartu proyek lebih kecil */
+.project {
+    padding: 10px; /* Kurangi padding agar lebih kecil */
+}
+
+.project-card {
+    width: 80%; /* Kurangi lebar */
+    max-width: 300px; /* Batasi ukuran maksimum */
+    margin: 10px auto; /* Pusatkan kartu */
+    padding: 15px; /* Kurangi padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Kurangi efek hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    max-height: 150px; /* Kurangi tinggi gambar */
+    object-fit: cover; /* Pastikan gambar tetap rapi */
+}
+
+.project-card h3 {
+    font-size: 1.2em; /* Kurangi ukuran judul */
+    margin: 10px 0;
+}
+
+.project-card p {
+    font-size: 0.9em; /* Kurangi ukuran teks */
+    margin-bottom: 10px;
+}

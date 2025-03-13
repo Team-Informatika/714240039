@@ -1,0 +1,88 @@
+/* Warna tema pastel: biru, pink, dan kuning */
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-color: #fff5e1; /* Kuning pastel */
+    color: #ff69b4; /* Pink pastel */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #add8e6; /* Biru pastel */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    color: #fff;
+    font-size: 2em;
+}
+
+.about img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #ffb6c1; /* Pink pastel */
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #ff69b4; /* Pink pastel */
+    background: #ffecb3; /* Kuning pastel */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.skills, .projects, .contact {
+    margin: 20px 0;
+}
+
+.skill-box {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    padding: 15px;
+    background: #b3e0ff; /* Biru pastel */
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skill-box img {
+    width: 50px;
+    height: 50px;
+}
+
+.project {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    border: 2px solid #ffb6c1; /* Pink pastel */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact a {
+    color: #ff69b4; /* Pink pastel */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Efek hover */
+.project:hover {
+    background-color: #ffecb3; /* Kuning pastel */
+    transition: 0.3s;
+}
+
+.skill-box:hover {
+    background-color: #ffb6c1; /* Pink pastel */
+    transition: 0.3s;
+}

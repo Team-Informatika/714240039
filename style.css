@@ -1,19 +1,22 @@
 /* Warna tema pastel: biru, pink, dan kuning */
 body {
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Poppins", sans-serif;
     background-color: #fff5e1; /* Kuning pastel */
-    color: #ff69b4; /* Pink pastel */
+    color: #333;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
+/* Container */
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: auto;
     padding: 20px;
 }
 
+/* Header */
 header {
     background-color: #add8e6; /* Biru pastel */
     padding: 20px;
@@ -24,36 +27,104 @@ header {
 header h1 {
     color: #fff;
     font-size: 2em;
+    margin: 0;
 }
 
+/* Foto Profil Lebih Lucu & Bentuk Tabung */
+/* Container Foto Profil */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px; /* Menambahkan jarak dari header */
+}
+
+/* Foto Profil Berbentuk Tabung */
 .about img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid #ffb6c1; /* Pink pastel */
-    margin-bottom: 10px;
+    width: 150px; /* Lebar lebih kecil */
+    height: 200px; /* Tinggi lebih besar */
+    border-radius: 50px; /* Membentuk tabung */
+    border: 5px solid #ffb6c1;
+    object-fit: cover;
+    box-shadow: 0px 5px 15px rgba(255, 182, 193, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Efek Hover */
+.about img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(255, 105, 180, 0.8);
+}
+
+
+/* Bagian Tentang Saya */
+.about-text {
+    margin-top: 15px; /* Jarak antara foto profil dan teks */
+    text-align: center;
+    background: linear-gradient(90deg, #ff8fab, #ffc3a0);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: white;
+    display: inline-block;
+}
+
+/* Judul Bagian */
 h2 {
-    color: #ff69b4; /* Pink pastel */
-    background: #ffecb3; /* Kuning pastel */
+    color: #fff;
+    background: linear-gradient(90deg, #ff8fab, #ffc3a0);
     display: inline-block;
     padding: 10px 20px;
     border-radius: 20px;
+    font-size: 1.8em;
+    font-weight: 600;
 }
 
+/* Tombol Download CV */
+.cv-download {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cv-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #ff8fab, #ffc3a0);
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cv-button:hover {
+    background: linear-gradient(90deg, #ff8fab, #ffc3a0);
+    transform: scale(1.05);
+}
+
+/* Skill Section */
 .skills, .projects, .contact {
-    margin: 20px 0;
+    margin: 40px 0;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
 .skill-box {
-    display: inline-block;
-    width: 30%;
-    margin: 10px;
+    width: 150px;
     padding: 15px;
-    background: #b3e0ff; /* Biru pastel */
+    background: #b3e0ff;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s;
 }
 
 .skill-box img {
@@ -61,50 +132,22 @@ h2 {
     height: 50px;
 }
 
-.project {
-    background: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    margin: 10px;
-    border: 2px solid #ffb6c1; /* Pink pastel */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.contact a {
-    color: #ff69b4; /* Pink pastel */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Efek hover */
-.project:hover {
-    background-color: #ffecb3; /* Kuning pastel */
-    transition: 0.3s;
-}
-
 .skill-box:hover {
-    background-color: #ffb6c1; /* Pink pastel */
-    transition: 0.3s;
+    background-color: #ffb6c1;
 }
 
-.icon-container {
-    font-size: 1.5em;
-}
-
-/*kartu proyek*/
-/* Kartu proyek lebih kecil */
-.project {
-    padding: 10px; /* Kurangi padding agar lebih kecil */
+/* Proyek */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .project-card {
-    width: 80%; /* Kurangi lebar */
-    max-width: 300px; /* Batasi ukuran maksimum */
-    margin: 10px auto; /* Pusatkan kartu */
-    padding: 15px; /* Kurangi padding */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
@@ -112,112 +155,234 @@ h2 {
 }
 
 .project-card:hover {
-    transform: translateY(-5px); /* Kurangi efek hover */
+    transform: translateY(-5px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .project-card img {
     width: 100%;
     height: auto;
-    border-radius: 10px 10px 0 0;
-    max-height: 150px; /* Kurangi tinggi gambar */
-    object-fit: cover; /* Pastikan gambar tetap rapi */
+    border-radius: 10px;
+    max-height: 150px;
+    object-fit: cover;
 }
 
 .project-card h3 {
-    font-size: 1.2em; /* Kurangi ukuran judul */
+    font-size: 1.2em;
     margin: 10px 0;
 }
 
 .project-card p {
-    font-size: 0.9em; /* Kurangi ukuran teks */
-    margin-bottom: 10px;
+    font-size: 0.9em;
 }
 
-/*section education*/
+/* Pendidikan */
 .education {
     padding: 20px;
 }
 
-h2 {
-    font-size: 2.2em;
-    font-weight: bold;
-    color: #444;
-    background: linear-gradient(90deg, #ff8fab, #ffc3a0);
-    padding: 10px 20px;
-    border-radius: 50px;
-    display: inline-block;
-    color: white;
-}   
-
-/*timeline*/
 .timeline {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
     padding: 20px 0;
 }
 
-/*animasi saat scrool*/
 .timeline-item {
     display: flex;
     align-items: center;
     margin: 20px 0;
     position: relative;
-    opacity: 0; /*awalnya tak terlihat*/
-    transform: translateY(30px); /*bergerak ke bawah*/
-    transition: opacity 0.6s, ease-out, transform 0.6s ease-out; /*animasi*/
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .timeline-item.show {
-    opacity: 1; /*muncul*/
-    transform: translateY(0); /*bergerak ke atas*/
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/*kartu lebih cute*/
 .card {
     background: white;
-    padding: 25px;
-    border-radius: 50px;
-    width: 320px;
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-    border: 3px solid #ffb6c1;
+    border: 3px solid #add8e6;
 }
 
 .card:hover {
-    transform: scale(1.08);
-    box-shadow: 0px 8px 20px rgba(255, 182, 193, 0.6);
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 128, 255, 0.3);
 }
 
-.dot {
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    position: absolute;
-    left: -12px;
-    box-shadow: 0px 5px 15px rgba(0, 255, 0, 0.4);
-}
-
-footer {
-    margin-top: 30px;
-    padding: 15px;
-    font-size: 1em;
-    background: linear-gradient(90deg, #ff9cee, #ffabab);
-    color: white;
-    border-radius: 30px 30px 0 0;
-}
-
-footer a {
+/* Kontak */
+.contact a {
+    color: #ff69b4;
     text-decoration: none;
-    color: white;
     font-weight: bold;
-    font-size: 1.1em;
-    transition: color 0.3s;
 }
 
-footer a:hover {
-    color: #ffd1dc;
+.contact p {
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Efek transparan & bercahaya untuk ikon */
+.contact .icon {
+    width: 32px;
+    height: 32px;
+    filter: drop-shadow(0px 0px 5px rgba(255, 182, 193, 0.8));
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.contact .icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 10px rgba(255, 105, 180, 1));
+}
+
+/* Tombol WhatsApp Mengambang */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    animation: bounce 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* Animasi Bouncing */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .skills-container,
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-box {
+        width: 80%;
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    /* Header */
+    header {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    /* Foto Profil */
+    .about img {
+        width: 120px;
+        height: 160px;
+        border-radius: 40px; /* Bentuk tetap tabung */
+    }
+
+    /* Bagian Tentang Saya */
+    .about-text {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+
+    /* Judul */
+    h2 {
+        font-size: 1.5em;
+        padding: 8px 15px;
+    }
+
+    /* Skills */
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-box {
+        width: 80%;
+    }
+
+    /* Proyek */
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    /* Pendidikan */
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    /* Kontak */
+    .contact p {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Tombol WhatsApp */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .whatsapp-float img {
+        width: 30px;
+        height: 30px;
+    }
 }

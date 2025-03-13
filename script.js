@@ -52,3 +52,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// Fungsi untuk mengecek apakah elemen terlihat di viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return rect.top <= window.innerHeight - 100 && rect.bottom >= 100;
+}
+
+// Fungsi untuk menampilkan atau menyembunyikan kartu berdasarkan scroll
+function handleScroll() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    timelineItems.forEach(item => {
+        if (isInViewport(item)) {
+            item.classList.add('show'); // Munculkan kartu
+        } else {
+            item.classList.remove('show'); // Sembunyikan kartu jika kembali ke atas
+        }
+    });
+}
+
+// Event listener untuk scroll
+window.addEventListener('scroll', handleScroll);
+
+// Jalankan sekali saat pertama kali halaman dimuat
+handleScroll();

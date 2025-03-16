@@ -88,3 +88,21 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollToTopBtn.addEventListener("click", function() {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+          const scrollToTopBtn = document.getElementById("scrollToTop");
+
+          // Tampilkan tombol saat pengguna menggulir ke bawah
+          window.addEventListener("scroll", function () {
+            if (window.scrollY > 300) {
+              scrollToTopBtn.style.display = "block";
+            } else {
+              scrollToTopBtn.style.display = "none";
+            }
+          });
+
+          // Efek scroll lembut ke atas
+          scrollToTopBtn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        });

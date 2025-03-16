@@ -412,9 +412,9 @@ h2 {
     }
 }
 /* Tombol Scroll to Top */
- .scrollToTop {
+ #scrollToTop {
             position: fixed;
-            bottom: 20px;
+            bottom: 100px;
             right: 20px;
             display: none;
             background-color: #25D366; /* Warna hijau WhatsApp */
@@ -428,6 +428,6 @@ h2 {
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
         
-    .scrollToTop:hover {
+        #scrollToTop:hover {
             background-color: #1ebe57;
         }

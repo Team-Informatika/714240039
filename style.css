@@ -2,7 +2,7 @@
 body {
     font-family: "Poppins", sans-serif;
     background-color: #fff5e1; /* Kuning pastel */
-    color: #333;
+    color: #FF69B4;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -49,7 +49,7 @@ header h1 {
     margin: 0;
 }
 
-/* Foto Profil Lebih Lucu & Bentuk Tabung */
+/* Foto Profil Bentuk Tabung */
 /* Container Foto Profil */
 .about {
     display: flex;

@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const textElement = document.getElementById("typing-text");
   const textList = [
-    "Mahasiswa Teknik Informatika",
-    "Pengembang Web Pemula",
-    "Web Developer",
-    "Front-End Developer",
+    "Mahasiswa Teknik Informatikaa",
+    "Pengembang Web Pemulaa",
+    "Web Developerr",
+    "Front-End Developerr",
   ];
 
   let textIndex = 0;

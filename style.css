@@ -7,6 +7,25 @@ body {
     padding: 0;
     text-align: center;
 }
+/*Navbar*/
+ .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #B0D6E3;
+            padding: 15px 0;
+            border-radius: 10px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            color: #FF6F61;
+        }
 
 /* Container */
 .container {

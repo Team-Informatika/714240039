@@ -9,7 +9,7 @@ body {
 }
 /*Navbar*/
  .navbar {
-            display: flex;
+            display: flexbox;
             justify-content: center;
             background-color: #B0D6E3;
             padding: 15px 0;

@@ -1,4 +1,4 @@
-/* Warna tema pastel */
+/* Warna tema pastel: biru, pink, dan kuning */
 body {
     font-family: "Poppins", sans-serif;
     background-color: #fff5e1; /* Kuning pastel */
@@ -7,28 +7,25 @@ body {
     padding: 0;
     text-align: center;
 }
-
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: center;
-    background-color: #B0D6E3; /* Biru pastel */
-    padding: 15px 0;
-    border-radius: 10px;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 14px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.navbar a:hover {
-    color: #FF69B4;
-}
+/*Navbar*/
+ .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #B0D6E3;
+            padding: 15px 0;
+            border-radius: 10px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            color: #FF69B4;
+        }
 
 /* Container */
 .container {
@@ -40,7 +37,7 @@ body {
 
 /* Header */
 header {
-    background-color: #ADD8E6; /* Biru pastel */
+    background-color: #add8e6; /* Biru pastel */
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
@@ -52,35 +49,39 @@ header h1 {
     margin: 0;
 }
 
-/* Foto Profil */
+/* Foto Profil Lebih Lucu & Bentuk Tabung */
+/* Container Foto Profil */
 .about {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 30px; /* Menambahkan jarak dari header */
 }
 
+/* Foto Profil Berbentuk Tabung */
 .about img {
-    width: 150px;
-    height: 200px;
-    border-radius: 50px;
-    border: 5px solid #FFB6C1;
+    width: 150px; /* Lebar lebih kecil */
+    height: 200px; /* Tinggi lebih besar */
+    border-radius: 50px; /* Membentuk tabung */
+    border: 5px solid #ffb6c1;
     object-fit: cover;
     box-shadow: 0px 5px 15px rgba(255, 182, 193, 0.5);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Efek Hover */
 .about img:hover {
     transform: scale(1.05);
     box-shadow: 0px 8px 20px rgba(255, 105, 180, 0.8);
 }
 
+
 /* Bagian Tentang Saya */
 .about-text {
-    margin-top: 15px;
+    margin-top: 15px; /* Jarak antara foto profil dan teks */
     text-align: center;
-    background: linear-gradient(90deg, #FF8FAB, #FFC3A0);
+    background: linear-gradient(90deg, #ff8fab, #ffc3a0);
     padding: 10px 20px;
     border-radius: 20px;
     font-size: 1.2em;
@@ -89,10 +90,16 @@ header h1 {
     display: inline-block;
 }
 
+.p {
+    font-size: 2.1em;
+    margin: 10px 0;
+    font-style: italic;
+}
+
 /* Judul Bagian */
 h2 {
     color: #fff;
-    background: linear-gradient(90deg, #FF8FAB, #FFC3A0);
+    background: linear-gradient(90deg, #ff8fab, #ffc3a0);
     display: inline-block;
     padding: 10px 20px;
     border-radius: 20px;
@@ -100,30 +107,172 @@ h2 {
     font-weight: 600;
 }
 
-/* Tombol Scroll to Top */
-#scrollToTop {
-    position: fixed;
-    bottom: 100px; /* Jarak di atas tombol WhatsApp */
-    right: 20px;
-    display: none;
-    background-color: #FFB6C1; /* Warna pastel pink */
+/* Tombol Download CV */
+.cv-download {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cv-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #ff8fab, #ffc3a0);
     color: white;
-    border: none;
-    border-radius: 50%;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cv-button:hover {
+    background: linear-gradient(90deg, #ff8fab, #ffc3a0);
+    transform: scale(1.05);
+}
+
+/* Skill Section */
+.skills, .projects, .contact {
+    margin: 40px 0;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skill-box {
+    width: 150px;
+    padding: 15px;
+    background: #b3e0ff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skill-box img {
     width: 50px;
     height: 50px;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    animation: floating 2s infinite ease-in-out;
 }
 
-#scrollToTop:hover {
-    background-color: #FF69B4; /* Warna pink lebih gelap */
+.skill-box:hover {
+    background-color: #ffb6c1;
 }
 
-/* Tombol WhatsApp */
+/* Proyek */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-card {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.project-card p {
+    font-size: 0.9em;
+}
+
+/* Pendidikan */
+.education {
+    padding: 20px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.timeline-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 3px solid #add8e6;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 128, 255, 0.3);
+}
+
+/* Kontak */
+.contact a {
+    color: #ff69b4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact p {
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Efek transparan & bercahaya untuk ikon */
+.contact .icon {
+    width: 32px;
+    height: 32px;
+    filter: drop-shadow(0px 0px 5px rgba(255, 182, 193, 0.8));
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.contact .icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 10px rgba(255, 105, 180, 1));
+}
+
+/* Tombol WhatsApp Mengambang */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -144,11 +293,6 @@ h2 {
     transform: scale(1.1);
 }
 
-.whatsapp-float img {
-    width: 35px;
-    height: 35px;
-}
-
 /* Animasi Bouncing */
 @keyframes bounce {
     0%, 100% {
@@ -159,11 +303,9 @@ h2 {
     }
 }
 
-/* Animasi Floating */
-@keyframes floating {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
 }
 
 /* Responsiveness */
@@ -172,6 +314,25 @@ h2 {
         width: 95%;
     }
 
+    .skills-container,
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-box {
+        width: 80%;
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    /* Header */
     header {
         padding: 15px;
         border-radius: 10px;
@@ -181,22 +342,63 @@ h2 {
         font-size: 1.5em;
     }
 
+    /* Foto Profil */
     .about img {
         width: 120px;
         height: 160px;
-        border-radius: 40px;
+        border-radius: 40px; /* Bentuk tetap tabung */
     }
 
+    /* Bagian Tentang Saya */
     .about-text {
         font-size: 1em;
         padding: 8px 15px;
     }
 
+    /* Judul */
     h2 {
         font-size: 1.5em;
         padding: 8px 15px;
     }
 
+    /* Skills */
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-box {
+        width: 80%;
+    }
+
+    /* Proyek */
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    /* Pendidikan */
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    /* Kontak */
+    .contact p {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Tombol WhatsApp */
     .whatsapp-float {
         width: 50px;
         height: 50px;
@@ -208,4 +410,34 @@ h2 {
         width: 30px;
         height: 30px;
     }
+}
+/* Tombol Scroll to Top */
+#scrollToTop {
+    position: fixed;
+    bottom: 100px; /* Jarak di atas tombol WhatsApp */
+    right: 20px;
+    display: none;
+    background-color: #FFB6C1; /* Warna pastel pink sesuai tema web */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    animation: floating 2s infinite ease-in-out;
+}
+
+/* Efek hover */
+#scrollToTop:hover {
+    background-color: #FF69B4; /* Warna pink lebih gelap saat hover */
+}
+
+/* Animasi tombol naik turun */
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); } /* Naik 10px */
+    100% { transform: translateY(0px); }
 }

@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   const textElement = document.getElementById("typing-text");
-
-  // Daftar teks yang akan ditampilkan secara bergantian
   const textList = [
     "Mahasiswa Teknik Informatika",
     "Pengembang Web Pemula",
@@ -15,26 +13,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function typeText() {
     const text = textList[textIndex];
-
-    // Mengatur proses mengetik dan menghapus karakter
     textElement.textContent = text.substring(0, charIndex);
     charIndex = isDeleting ? charIndex - 1 : charIndex + 1;
 
-    // Atur kecepatan mengetik dan menghapus
     let typeSpeed = isDeleting ? 50 : 100;
-
     if (!isDeleting && charIndex === text.length) {
-      typeSpeed = 2000; // Jeda sebelum mulai menghapus
+      typeSpeed = 2000;
       isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
-      textIndex = (textIndex + 1) % textList.length; // Pindah ke teks selanjutnya
+      textIndex = (textIndex + 1) % textList.length;
     }
 
     setTimeout(typeText, typeSpeed);
   }
-
-  // Mulai efek mengetik setelah halaman dimuat
   setTimeout(typeText, 1000);
 
   // Animasi hover pada proyek
@@ -55,54 +47,26 @@ document.addEventListener("DOMContentLoaded", () => {
     return rect.top <= window.innerHeight - 100 && rect.bottom >= 100;
   }
 
-  // Fungsi untuk menampilkan atau menyembunyikan kartu berdasarkan scroll
+  // Fungsi untuk menampilkan atau menyembunyikan elemen berdasarkan scroll
   function handleScroll() {
     document.querySelectorAll(".timeline-item").forEach((item) => {
-      if (isInViewport(item)) {
-        item.classList.add("show"); // Munculkan kartu
-      } else {
-        item.classList.remove("show"); // Sembunyikan kartu jika kembali ke atas
-      }
+      item.classList.toggle("show", isInViewport(item));
     });
   }
-
-  // Event listener untuk scroll
   window.addEventListener("scroll", handleScroll);
+  handleScroll(); // Jalankan sekali saat halaman dimuat
 
-  // Jalankan sekali saat pertama kali halaman dimuat
-  handleScroll();
+  // Scroll to Top Button
+  const scrollToTopBtn = document.getElementById("scrollToTop");
+
+  function toggleScrollToTop() {
+    scrollToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  }
+
+  window.addEventListener("scroll", toggleScrollToTop);
+  scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  toggleScrollToTop(); // Cek saat halaman pertama kali dimuat
 });
-  // Ambil elemen tombol
-        const scrollToTopBtn = document.getElementById("scrollToTop");
-
-        // Tampilkan tombol saat pengguna menggulir ke bawah
-        window.addEventListener("scroll", function() {
-            if (window.scrollY > 300) { 
-                scrollToTopBtn.style.display = "block";
-            } else {
-                scrollToTopBtn.style.display = "none";
-            }
-        });
-
-        // Tambahkan event listener untuk menggulir ke atas saat tombol diklik
-        scrollToTopBtn.addEventListener("click", function() {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-
-        document.addEventListener("DOMContentLoaded", function () {
-          const scrollToTopBtn = document.getElementById("scrollToTop");
-
-          // Tampilkan tombol saat pengguna menggulir ke bawah
-          window.addEventListener("scroll", function () {
-            if (window.scrollY > 300) {
-              scrollToTopBtn.style.display = "block";
-            } else {
-              scrollToTopBtn.style.display = "none";
-            }
-          });
-
-          // Efek scroll lembut ke atas
-          scrollToTopBtn.addEventListener("click", function () {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          });
-        });

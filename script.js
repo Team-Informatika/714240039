@@ -72,3 +72,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // Jalankan sekali saat pertama kali halaman dimuat
   handleScroll();
 });
+  // Ambil elemen tombol
+        const scrollToTopBtn = document.getElementById("scrollToTop");
+
+        // Tampilkan tombol saat pengguna menggulir ke bawah
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 300) { 
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        });
+
+        // Tambahkan event listener untuk menggulir ke atas saat tombol diklik
+        scrollToTopBtn.addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });

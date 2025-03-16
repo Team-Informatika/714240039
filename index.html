@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Marsya Adinda</title>
 
-    <!-- Favicon (Logo Web) -->
+    <!-- Favicon -->
     <link rel="icon" type="image/jpg" href="ppweb.jpg">
 
     <!-- Link CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GK262JCDLG"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -22,23 +22,19 @@
         gtag('js', new Date());
         gtag('config', 'G-GK262JCDLG');
     </script>
-
-    <!-- Link tracker -->
-    <script type="module" src="https://cdn.jsdelivr.net/gh/domyid/tracker@latest/index.js"></script>
 </head>
 
 <body>
-       <!-- Navbar -->
-        <nav class="navbar">
-         <a href="#about-section">About</a>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#about-section">About</a>
         <a href="#skill-section">Skill</a>
         <a href="#pendidikan-section">Education</a>
         <a href="#project-section">Project</a>
         <a href="#contact-section">Contact</a>
-        </nav>
+    </nav>
 
     <div class="container">
-
         <!-- Header -->
         <header>
             <h1>Marsya Adinda Isyara Br. Saragih</h1>
@@ -46,9 +42,8 @@
         </header>
 
         <!-- Tentang Saya -->
-        <section class="about">
+        <section class="about" id="about-section">
             <img src="ppweb.jpg" alt="Foto Profil">
-            <div id="about-section" class="section"></div>
             <h2>Tentang Saya</h2>
             <p>Hai, saya Dinda, seorang mahasiswa D4 Teknik Informatika yang sedang dalam tahap awal belajar pemrograman. Saya sangat antusias untuk mengeksplorasi dunia teknologi dan terus mengembangkan keterampilan saya. Selain itu, saya juga tertarik dengan berbagai aspek kreatif seperti editing di Canva dan editing video. Saya selalu bersemangat untuk belajar hal-hal baru dan mengasah kemampuan saya agar dapat berkontribusi lebih baik dalam bidang yang saya geluti.</p>
         </section>
@@ -59,179 +54,63 @@
         </div>
 
         <!-- Skill -->
-        <section class="skills">
-            <div id="skill-section" class="section"></div>
+        <section class="skills" id="skill-section">
             <h2>Skill Bahasa Pemrograman</h2>
             <div class="skills-container">
-                <div class="skill-box">
-                    <img src="html.jpg" alt="HTML">
-                    <p>HTML (Struktur halaman web).</p>
-                </div>
-                <div class="skill-box">
-                    <img src="css.jpg" alt="CSS">
-                    <p>CSS (Tampilan dan desain web).</p>
-                </div>
-                <div class="skill-box">
-                    <img src="js.jpg" alt="JavaScript">
-                    <p>JavaScript (Interaktivitas).</p>
-                </div>
+                <div class="skill-box"><img src="html.jpg" alt="HTML"><p>HTML</p></div>
+                <div class="skill-box"><img src="css.jpg" alt="CSS"><p>CSS</p></div>
+                <div class="skill-box"><img src="js.jpg" alt="JavaScript"><p>JavaScript</p></div>
             </div>
-
             <h2>Skill Lainnya</h2>
             <div class="skills-container">
-                <div class="skill-box">
-                    <img src="canv.jpeg" alt="Canva">
-                    <p>Canva (Editing desain grafis).</p>
-                </div>
-                <div class="skill-box">
-                    <img src="capcut.jpeg" alt="Capcut">
-                    <p>Capcut (Editing video).</p>
-                </div>
-                <div class="skill-box">
-                    <img src="foto.jpeg" alt="Fotografi">
-                    <p>Fotografi (Cakap menggunakan kamera).</p>
-                </div>
+                <div class="skill-box"><img src="canv.jpeg" alt="Canva"><p>Canva</p></div>
+                <div class="skill-box"><img src="capcut.jpeg" alt="Capcut"><p>Capcut</p></div>
+                <div class="skill-box"><img src="foto.jpeg" alt="Fotografi"><p>Fotografi</p></div>
             </div>
         </section>
 
         <!-- Pendidikan -->
-        <section class="education">
-            <div id="pendidikan-section" class="section"></div>
+        <section class="education" id="pendidikan-section">
             <h2>Pendidikan</h2>
             <div class="timeline">
-                <div class="timeline-item">
-                    <span class="dot pink"></span>
-                    <div class="card">
-                        <h3>TKIT PERMATA HATI</h3>
-                        <p>2011-2012</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <span class="dot yellow"></span>
-                    <div class="card">
-                        <h3>SDIT PERMATA HATI</h3>
-                        <p>2012-2018</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <span class="dot green"></span>
-                    <div class="card">
-                        <h3>SMPIT MA'RIFATUL HIKMAH</h3>
-                        <p>2018-2021</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <span class="dot blue"></span>
-                    <div class="card">
-                        <h3>MAS MA'RIFATUL HIKMAH</h3>
-                        <p>2021-2024</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <span class="dot pink"></span>
-                    <div class="card">
-                        <h3>UNIVERSITAS LOGISTIK DAN BISNIS INTERNASIONAL</h3>
-                        <p>2024-sekarang</p>
-                    </div>
-                </div>
+                <div class="timeline-item"><span class="dot pink"></span><div class="card"><h3>TKIT PERMATA HATI</h3><p>2011-2012</p></div></div>
+                <div class="timeline-item"><span class="dot yellow"></span><div class="card"><h3>SDIT PERMATA HATI</h3><p>2012-2018</p></div></div>
+                <div class="timeline-item"><span class="dot green"></span><div class="card"><h3>SMPIT MA'RIFATUL HIKMAH</h3><p>2018-2021</p></div></div>
+                <div class="timeline-item"><span class="dot blue"></span><div class="card"><h3>MAS MA'RIFATUL HIKMAH</h3><p>2021-2024</p></div></div>
+                <div class="timeline-item"><span class="dot pink"></span><div class="card"><h3>UNIVERSITAS LOGISTIK DAN BISNIS INTERNASIONAL</h3><p>2024-sekarang</p></div></div>
             </div>
         </section>
 
         <!-- Proyek -->
-        <section class="projects">
-            <div id="project-section" class="section"></div>
+        <section class="projects" id="project-section">
             <h2>My Projects</h2>
             <div class="projects-container">
-                <div class="project-card">
-                    <a href="https://waffletoping.id.biz.id/" target="_blank">
-                        <img src="waffletoping.jpg" alt="Waffletoping">
-                        <h3>Waffletoping</h3>
-                        <p>Membuat web waffletoping dengan menggunakan HTML, CSS, dan JavaScript.</p>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <img src="exogame.jpg" alt="Exogame">
-                    <h3>EXOGAME</h3>
-                    <p>Exogame adalah permainan arkade dengan dua level kesulitan berbeda, dibuat menggunakan Greenfoot.</p>
-                </div>
-
-                <div class="project-card">
-                    <img src="Herowash.jpg" alt="Herowash">
-                    <h3>Herowash</h3>
-                    <p>Herowash adalah situs web responsif untuk layanan laundry. Pemenang Creative Design Thinking 2024.</p>
-                </div>
-
-                <div class="project-card">
-                    <a href="https://www.instagram.com/reel/DDQ7L6bJSmg/?igsh=dmc3N3Btb21qcjUy" target="_blank">
-                        <img src="konten.jpg" alt="konten">
-                        <h3>Konten Video Kradio</h3>
-                        <p>Dokumentasi dan Desain Konten Wisuda ke-2 Universitas Logistik dan Bisnis Internasional.</p>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <a href="https://www.instagram.com/p/DEcpxsRvu58/?igsh=MWQwOThwbjRoY2I4Ng==" target="_blank">
-                        <img src="kradio1.jpg" alt="kradio">
-                        <h3>Desain Konten Kradio</h3>
-                        <p>Desain Konten Apresiasi & Pengangkatan General Manager Kradio ULBI.</p>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <img src="poster.jpg" alt="poster">
-                    <h3>Poster Herowash</h3>
-                    <p>Desain Poster infografis "Implementasi Teknologi Digital dalam layanan laundry".</p>
-                </div>
-
-                <div class="project-card">
-                    <a href="https://www.instagram.com/p/DESwNuDzFX5lw2385fszRkI0wJZOYs5Rf1MzmI0/?igsh=MWd2NHR1b2M2Z2diag==" target="_blank">
-                        <img src="1c.jpg" alt="postingan">
-                        <h3>Konten Kelas</h3>
-                        <p>Desain Konten Dokumentasi 1C Camp After UTS</p>
-                    </a>
-                </div>
+                <div class="project-card"><a href="https://waffletoping.id.biz.id/" target="_blank"><img src="waffletoping.jpg" alt="Waffletoping"><h3>Waffletoping</h3></a></div>
+                <div class="project-card"><img src="exogame.jpg" alt="Exogame"><h3>EXOGAME</h3></div>
+                <div class="project-card"><img src="Herowash.jpg" alt="Herowash"><h3>Herowash</h3></div>
             </div>
         </section>
 
         <!-- Kontak -->
-        <section class="contact">
-            <div id="contact-section" class="section"></div>
+        <section class="contact" id="contact-section">
             <h2>Kontak</h2>
-            <p>
-                <img src="gmail.jpg" alt="Email" class="icon">
-                <a href="https://mail.google.com/mail/?view=cm&to=adindamarsya33@gmail.com" target="_blank">adindamarsya33@gmail.com</a>
-            </p>
-            <p>
-                <img src="tlpn.jpg" alt="Telepon" class="icon">
-                <a href="tel:082191365504">082191365504</a>
-            </p>
-            <p>
-                <img src="ig.jpg" alt="Instagram" class="icon">
-                <a href="https://www.instagram.com/marsyadindaaa_?igsh=ajE0cTQ5anN2d245&utm_source=qr" target="_blank">marsyadindaaa_</a>
-            </p>
-            <p>
-                <a href="https://wa.me/6282191365504" class="whatsapp-float" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat WhatsApp">
-                </a>
-            </p>
+            <p><img src="gmail.jpg" alt="Email" class="icon"><a href="mailto:adindamarsya33@gmail.com">adindamarsya33@gmail.com</a></p>
+            <p><img src="tlpn.jpg" alt="Telepon" class="icon"><a href="tel:082191365504">082191365504</a></p>
+            <p><img src="ig.jpg" alt="Instagram" class="icon"><a href="https://www.instagram.com/marsyadindaaa_" target="_blank">marsyadindaaa_</a></p>
+            <p><a href="https://wa.me/6282191365504" class="whatsapp-float" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat WhatsApp"></a></p>
         </section>
-
-         <button id="scrollToTop">↑</button>
-         <head>
-    <link rel="stylesheet" href="style.css">
-
-
     </div>
+
+    <!-- Tombol Scroll ke Atas -->
+    <button id="scrollToTop">↑</button>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Marsya Adinda Isyara Br. Saragih</p>
     </footer>
 
-    <!-- Tambahkan script.js -->
+    <!-- Script -->
     <script src="script.js"></script>
-
 </body>
 
 </html>

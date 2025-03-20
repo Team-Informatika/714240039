@@ -424,6 +424,27 @@ h2 {
         height: 160px;
         border-radius: 40px; /* Bentuk tetap tabung */
     }
+     #fotoProfil {
+            display: none;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid #333;
+        }
+        .toggle-button {
+            background: linear-gradient(45deg, #ff758c, #ff7eb3);
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .toggle-button:hover {
+            background: linear-gradient(45deg, #7ec8e3, #91d5ff);
+            transform: scale(1.1);
+        }
 
     /* Bagian Tentang Saya */
     .about-text {

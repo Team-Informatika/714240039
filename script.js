@@ -70,3 +70,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   toggleScrollToTop(); // Cek saat halaman pertama kali dimuat
 });
+
+ function toggleFoto() {
+   var foto = document.getElementById("fotoProfil");
+   if (foto.style.display === "none") {
+     foto.style.display = "block";
+   } else {
+     foto.style.display = "none";
+   }
+ }

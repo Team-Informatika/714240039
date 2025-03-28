@@ -1,3 +1,6 @@
+
+console.log(window.tracker);
+
 document.addEventListener("DOMContentLoaded", () => {
   const textElement = document.getElementById("typing-text");
   const textList = [

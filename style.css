@@ -27,7 +27,7 @@ body {
     transition: 0.3s;
 }
 
-/* Efek hov
+/* Efek hover*/
 .navbar a:hover {
     color: #FF69B4;
 }
